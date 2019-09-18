@@ -12,7 +12,7 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade, double scale );
 
 string cascadeName;
 const char *title = "Genius Game";
-Mat fruta;
+//Mat fruta;
 
 int main( int argc, const char** argv )
 {
@@ -22,9 +22,9 @@ int main( int argc, const char** argv )
     CascadeClassifier cascade;
     double scale;
     
-    fruta = cv::imread("laranja.png", IMREAD_UNCHANGED);
-    if (fruta.empty())
-        printf("Error opening file laranja.pn\n");
+    //fruta = cv::imread("laranja.png", IMREAD_UNCHANGED);
+    //if (fruta.empty())
+      //  printf("Error opening file laranja.pn\n");
     cascadeName       = "/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml";
     scale = 1;
 
@@ -334,7 +334,8 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade, double scale)
         
     }
 
-    if (!fruta.empty())
-        drawTransparency2(img, fruta, 100, 100);
+    //if (!fruta.empty())
+       // drawTransparency2(img, fruta, 100, 100);
     imshow( title, img );
+    
 }
